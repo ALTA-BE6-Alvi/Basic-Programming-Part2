@@ -4,6 +4,14 @@ import "fmt"
 
 func Pangkat(base, pangkat int) int {
 	// your code here
+	if pangkat == 0 {
+		return 1
+	}
+	hasil := base
+	for i := 2; i <= pangkat; i++ {
+		hasil *= base
+	}
+	return hasil
 }
 
 func main() {
